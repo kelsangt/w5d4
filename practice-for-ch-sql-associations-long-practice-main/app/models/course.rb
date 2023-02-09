@@ -30,15 +30,10 @@ class Course < ApplicationRecord
         foreign_key: :prereq_id,
         optional: true
 
-    # has_many :instructors,
-    #     class_name: :Course,
-    #     primary_key: :id,
-    #     foreign_key: :instructor_id
     
     belongs_to :instructor,
         class_name: :User,
         primary_key: :id,
-        foreign_key: :instructor_id,
-        optional: true
+        foreign_key: :instructor_id
 
 end
